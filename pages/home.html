@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"> <!-- more modern then <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> -->  
+        <title>Home</title>
+        <meta name="description" content="TODO Description. This profile-page is a homage to the earliest web designers who were working without CSS & JS which were only invented in 1994/5."/> <!-- Meta description tips: https://www.coderseo.com/meta-description-generator -->
+        <!-- <meta name="robots" content="noindex"> robots.txt file overrides-->
+        <link rel="icon" href="media/favicon.ico" type="image/x-icon"> 
+        <base target="_blank"> <!-- only keep with footer script excluding internal links -->
+
+            <!-- TODO uncomment below once created New File called styles.css 
+             style lists to have more space, paragraphs more margin, link color different -->
+            <!-- <link rel="stylesheet" href="styles.css"> -->
+        <style>
+            /* or you could first try add internal CSS here */
+        </style>
+
+    </head>
+    <body>
+        <h1>Ratatouille - Remy explores Paris</h1>
+        <h4>author - Mark Teonidis</h4>
+        <h4>purpose - demonstrate the understanding of HTML - the building blocks of web design</h4>
+        <img src="../media/tamara95.png" height="150">
+        <hr>
+        <h2><em>Explore the beautiful facets of Paris, don't worry, Remy will show you around..</em></h2>
+        <hr>
+        <p>Locations:</p>
+        <ul>
+            <li><a href="/pages/rooftops.html">Rooftops</a></li>
+            <li><a href="/pages/catacombes.html">Catacombes</a></li>
+            <li><a href="/pages/eiffeltower.html">The Eiffel Tower</a></li>
+            <li><a href="/pages/riverseine.html">The River Seine</a></li>
+            <li><a href="/pages/restaurant.html">Remy's Restaurant</a></li>
+        </ul>
+
+        <!-- <div id="footer"></div> -->
+
+        <!-- BODY END -->
+        <script>
+        var links = document.links;
+        for (var i = 0; i < links.length; i++) {
+        if (links[i].hostname == window.location.hostname) // set other exclusion criteria by adding or conditions within the if parens with ||
+        {
+            links[i].target = "_self";
+        }
+        }
+        </script>
+        <script src="home.js"></script>
+    </body>
+</html>

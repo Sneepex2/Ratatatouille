@@ -1,50 +1,73 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8"> <!-- more modern then <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> -->  
-        <title>Home</title>
-        <meta name="description" content="TODO Description. This profile-page is a homage to the earliest web designers who were working without CSS & JS which were only invented in 1994/5."/> <!-- Meta description tips: https://www.coderseo.com/meta-description-generator -->
-        <!-- <meta name="robots" content="noindex"> robots.txt file overrides-->
-        <link rel="icon" href="media/favicon.ico" type="image/x-icon"> 
-        <base target="_blank"> <!-- only keep with footer script excluding internal links -->
 
-            <!-- TODO uncomment below once created New File called styles.css 
-             style lists to have more space, paragraphs more margin, link color different -->
-            <!-- <link rel="stylesheet" href="styles.css"> -->
-        <style>
-            /* or you could first try add internal CSS here */
-        </style>
+<head>
+    <meta charset="utf-8">
+    <!-- more modern then <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> -->
+    <title>Home</title>
+    <meta name="description" content="TODO Description. This profile-page is a homage to the earliest web designers who were working without CSS & JS which were only invented in 1994/5." />
+    <!-- Meta description tips: https://www.coderseo.com/meta-description-generator -->
+    <!-- <meta name="robots" content="noindex"> robots.txt file overrides-->
+    <link rel="icon" href="media/favicon.ico" type="image/x-icon">
+    <base target="_blank">
+    <!-- only keep with footer script excluding internal links -->
 
-    </head>
-    <body>
-        <h1>Ratatouille - Remy explores Paris</h1>
-        <h4>author - Mark Teonidis</h4>
-        <h4>purpose - demonstrate the understanding of HTML - the building blocks of web design</h4>
-        <img src="../media/tamara95.png" height="150">
-        <hr>
-        <h2><em>Explore the beautiful facets of Paris, don't worry, Remy will show you around..</em></h2>
-        <hr>
-        <p>Locations:</p>
-        <ul>
-            <li><a href="/pages/rooftops.html">Rooftops</a></li>
-            <li><a href="/pages/catacombes.html">Catacombes</a></li>
-            <li><a href="/pages/eiffeltower.html">The Eiffel Tower</a></li>
-            <li><a href="/pages/riverseine.html">The River Seine</a></li>
-            <li><a href="/pages/restaurant.html">Remy's Restaurant</a></li>
-        </ul>
+    <link rel="stylesheet" href="home.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
 
-        <!-- <div id="footer"></div> -->
+<body>
+    
+    <div class="main">
+        <div class="content">
+            <h1 class="title italiana-regular">Ratatouille - Remy explores Paris</h1>
+            <div class="links">
+                <a href="/pages/rooftops.html">Rooftops</a>
+                <div class="divider"></div>
+                <a href="/pages/riverseine.html">The River Seine</a>
+                <div class="divider"></div>
+                <a href="/pages/restaurant.html">Remy's Restaurant</a>
+            </div>
+        </div>
 
-        <!-- BODY END -->
-        <script>
+        <footer>
+            <p>author - Mark Teonidis</p>
+            <p>purpose - demonstrate the understanding of HTML - the building blocks of web design</p>
+            <p>shooting stars from <a href="https://codepen.io/delroyprithvi/pen/LYyJROR">https://codepen.io/delroyprithvi/pen/LYyJROR</a></p>
+        </footer>
+
+    </div>
+    <section>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </section>
+
+    <!-- <div id="footer"></div> -->
+
+    <!-- BODY END -->
+    <script>
         var links = document.links;
         for (var i = 0; i < links.length; i++) {
-        if (links[i].hostname == window.location.hostname) // set other exclusion criteria by adding or conditions within the if parens with ||
-        {
-            links[i].target = "_self";
+            if (links[i].hostname == window.location.hostname) // set other exclusion criteria by adding or conditions within the if parens with ||
+            {
+                links[i].target = "_self";
+            }
         }
-        }
-        </script>
-        <script src="home.js"></script>
-    </body>
+    </script>
+    <script src="home.js"></script>
+</body>
+
 </html>

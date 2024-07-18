@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="rooftops.css">
+    <link rel="stylesheet" href="stars.css"
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
@@ -16,16 +17,18 @@
 </head>
 
 <body>
+    <div style="pointer-events: none;" id="body"></div>
     <div class="main">
         <a class="home-link" href="/pages/home.html"><img src="../media/home.png" /><div>Go to Home</div></a>
         <div class="intro gradient-bottom">
+            <img class="plane" src="/media/plane.png" />
             <h1 class="title italiana-regular">Rooftops</h1>
         </div>
         <div class="content">
             <div class="first">
                 <div class="first-img"></div>
                 <div class="first-text">
-                    <p>Bonjour! Welcome to the rooftops of Paris, the City of Light! From up here, you can see the breathtaking panorama of this magnificent city. The Eiffel Tower stands tall, casting its graceful shadow across the Seine River. Look at the
+                    <p id="first">Bonjour! Welcome to the rooftops of Paris, the City of Light! From up here, you can see the breathtaking panorama of this magnificent city. The Eiffel Tower stands tall, casting its graceful shadow across the Seine River. Look at the
                         charming, red-tiled rooftops and the intricate, wrought-iron balconies that adorn every building, giving Paris its unique and romantic flair.</p>
 
                 </div>
@@ -34,7 +37,7 @@
             <div class="second">
                 <div class="second-text">
                     <hr>
-                    <p>Did you know that these rooftops are more than just picturesque? They played a crucial role in the history of Paris, especially during the 19th century when Baron Haussmann redesigned the city. These grand boulevards and the distinct
+                    <p id="second" class="text">Did you know that these rooftops are more than just picturesque? They played a crucial role in the history of Paris, especially during the 19th century when Baron Haussmann redesigned the city. These grand boulevards and the distinct
                         architecture we admire today were all part of his vision to modernize Paris. The rooftops also hide a secret world of Parisian life, from secret gardens to cozy artist studios.</p>
                 </div>
                 <div class="second-img">
@@ -42,6 +45,7 @@
                 </div>
             </div>
             <div class="third">
+                <img class="remy" src="/media/remy1.png" />
                 <hr>
                 <p>Let's move along and enjoy the gentle breeze as we hop from one roof to another. You might catch a glimpse of the majestic Notre-Dame Cathedral or the golden dome of Les Invalides. And remember, always keep an eye out for the delicious
                     scents wafting up from the boulangeries below—Paris is as much a feast for the nose as it is for the eyes!</p>
@@ -56,6 +60,7 @@
                 <footer>
                     <p>text generated with <a href="https://chatgpt.com/">https://chatgpt.com/</a></p>
                     <p> | code by - Mark Teonidis</p>
+                    <p> | credit for the stars to <a href="https://codepen.io/Katie_Lu_1015/pen/OeOPXV">https://codepen.io/Katie_Lu_1015/pen/OeOPXV</a></p>
                 </footer>
             </div>
     
@@ -64,5 +69,35 @@
 
 
 </div>
+<script src="rooftops.js"></script>
+
+<script>
+    var nbElements = 50; // Number of stars & sparkles
+
+// CSS Classes available
+var shapes = ['sparkle', 'star'];
+var sizes = ['','medium', 'small'];
+var styles = ['', 'alt', 'alt2'];
+var animations = ['pulse', 'pulse-1', 'pulse-2', 'pulse-3'];
+
+// Random generating elements
+for(var i = 0; i < nbElements; i++){
+  
+  // Random styles
+  var classes = shapes[rand(0,shapes.length)] + " ";
+  classes += sizes[rand(0,sizes.length)] + " ";
+  classes += styles[rand(0,styles.length)] + " ";
+  classes += animations[rand(0,animations.length)];
+  
+  // Random position
+  var style = "top:"+rand(0,100)+"%;left:"+rand(0,100)+"%;";
+  
+  document.getElementById("body").innerHTML+= '<div class="'+classes+'" style="'+style+'"></div>';
+}
+
+function rand(min, max){
+  return Math.floor((Math.random() * max) + min);
+}
+</script>
 </body>
 </html>

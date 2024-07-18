@@ -85,8 +85,8 @@ body {
 footer {
 	align-self: flex-end;
 	text-align: right;
-	background-color: rgba(0, 0, 0, 0.5);
-	padding: 5px;
+	background-color: rgba(0, 0, 0, 0.181);
+	padding: 10px;
 	border-top-left-radius: 10px;
 }
 
@@ -95,6 +95,10 @@ footer:hover p {
 }
 
 footer p {
+	color: grey;
+}
+
+footer a {
 	color: grey;
 }
 

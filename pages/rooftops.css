@@ -5,6 +5,15 @@
 	font-family: "Roboto", sans-serif;
 }
 
+body {
+	overflow-x: hidden;
+	margin: 0;
+}
+
+.body {
+	pointer-events: none;
+}
+
 .italiana-regular {
 	font-family: "Italiana", sans-serif;
 	font-weight: 400;
@@ -17,6 +26,7 @@
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
+	pointer-events: auto;
 }
 
 .home-link {
@@ -27,6 +37,7 @@
 	left: 10px;
 	display: flex;
 	align-items: center;
+	pointer-events: auto;
 }
 
 .home-link div {
@@ -96,6 +107,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	z-index: 3;
 }
 
 @keyframes example {
@@ -133,7 +145,6 @@
 	display: flex;
 	justify-content: center;
 }
-
 .first p {
 	align-self: center;
 	width: 70%;
@@ -141,6 +152,10 @@
 	font-size: 20px;
 	margin-right: 50px;
 	margin-left: 200px;
+}
+
+.p1 {
+	margin-right: 0px;
 }
 
 .first-img {
@@ -161,7 +176,7 @@
 	width: 70%;
 	border-color: #17153b;
 	background-color: #17153b;
-	margin-left: 10px;
+	margin-left: 50px;
 	margin-bottom: 10px;
 }
 
@@ -195,6 +210,7 @@
 	width: 100%;
 	background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #17153b 100%),
 		url(../media/rooftops1.png);
+	pointer-events: none;
 }
 
 .gradient-bottom {
@@ -273,4 +289,34 @@ footer p {
 	font-size: 14px !important;
 	text-align: right !important;
 	display: inline !important;
+}
+
+@keyframes plane {
+	0% {
+		left: -500px;
+	}
+	50% {
+		left: 100vw;
+	}
+	51% {
+		left: 100vw;
+	}
+	100% {
+		left: 1000vw;
+	}
+}
+
+.plane {
+	position: absolute;
+	animation-name: plane;
+	animation-timing-function: linear;
+	animation-duration: 20s;
+	animation-iteration-count: infinite;
+	width: 150px;
+	top: 150px;
+}
+
+.remy {
+	width: 200px;
+	margin-right: 80px;
 }
